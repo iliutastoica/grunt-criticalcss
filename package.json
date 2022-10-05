@@ -21,10 +21,13 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "criticalcss": "0.6.1"
+    "criticalcss": "1.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -34,5 +37,6 @@
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "snyk": true
 }
